@@ -1,0 +1,19 @@
+/* body{
+    background-color: red;
+} */
+
+/* Selector de etiqueta */
+p, h2{
+    color: red;
+}
+
+/* Selector de clase */
+.azul {
+  color: brown;
+}
+.negro{
+    color: black;
+}
+p.parrafo_1{
+    font-size: 20px;
+}

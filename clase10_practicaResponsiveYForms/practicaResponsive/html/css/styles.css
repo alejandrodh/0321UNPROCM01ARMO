@@ -1,0 +1,50 @@
+/* -------------------- Kitchening -------------------- */
+*{
+    box-sizing: border-box;
+}
+/* Resets */
+ul, ol{
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+/* Generales */
+
+/* Cabecera */
+.main-header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.logo{
+    border-radius: 90%;
+}
+.main-nav {
+    background-color: rgba(0, 0, 255, 0.5);
+    width: 100%;
+}
+.main-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.main-nav ul li {
+    background-color: rgba(0, 255,0, 0.5);
+    width: 15.2%;
+    text-align: center;
+}
+
+/* Banner */
+
+
+/* Prodcutos */
+
+
+/* Responsive */
