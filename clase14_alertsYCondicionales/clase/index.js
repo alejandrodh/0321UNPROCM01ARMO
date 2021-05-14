@@ -2,12 +2,12 @@
 
 let tenista = {
     nombre: 'Guillermo',
-    saludar: function(){
+    saludar: function(param1){
         return 'Hola soy Guillermo'; 
     },  
 }
 
-console.log(tenista.saludar());
+console.log(tenista.saludar({nombre:"Ale"}));
 
 
 let got = [
