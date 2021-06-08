@@ -27,17 +27,40 @@ fetch( url )
 //Agregar gif a lista de favoritos.
 let favoritos = [];
 
+//REcuperar datos del storage
+let recuperoStorage = localStorage.getItem('favoritos');
+
+//Chequear y agregar la información de local storage en el array
+if(recuperoStorage != null){
+    favoritos = JSON.parse(recuperoStorage);
+}
+
+//Chequear que el id esté en el array para cambiar el texto al usuario.
+if(favoritos.includes(id)){
+    document.querySelector('.fav').innerText = "Quitar de favoritos";
+}
+
+
+
 //Cuando el usuario haga click en "agregar a favoritos _> Agregar id del gif dentro del array.
 let fav = document.querySelector('.fav');
 console.log(fav);
 
 fav.addEventListener("click", function(e){
-    console.log(e);
     e.preventDefault();
 
-    //Guardamos el id en el array
-    favoritos.push(id);
-    console.log(favoritos);
+    //Chequear si el id está en el array
+    if(favoritos.includes(id)){
+        let idASacar = favoritos.indexOf(id);
+        favoritos.splice(idASacar, 1);
+        document.querySelector('.fav').innerText = "Agregar a favoritos";
+    } else {
+        //Guardamos el id en el array
+        favoritos.push(id);
+        console.log(favoritos);
+        document.querySelector('.fav').innerText = "Quitar de favoritos";
+    }
+
 
     //Armamos un string
     let favParaStorage = JSON.stringify(favoritos);
