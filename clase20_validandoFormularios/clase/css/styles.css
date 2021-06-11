@@ -1,0 +1,14 @@
+.lista li{
+    list-style-type: none;
+}
+.lista a{
+    text-decoration: none;
+    color: #000;
+}
+.closeIcon{
+    display: none
+}
+.alert,
+.closeIcon {
+    color: red;
+}
